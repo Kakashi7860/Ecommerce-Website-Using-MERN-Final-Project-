@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Cart from "./pages/Cart"
+import AdminProducts from "./pages/AdminProducts"
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
+         <Route path="/admin" element={<AdminProducts />} />
+
 
 
 
