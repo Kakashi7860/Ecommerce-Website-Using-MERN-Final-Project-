@@ -4,6 +4,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Cart from "./pages/Cart"
 import AdminProducts from "./pages/AdminProducts"
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -11,12 +12,13 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart />} />
-         <Route path="/admin" element={<AdminProducts />} />
+        <Route path="/admin" element={<AdminProducts />} />
 
 
 

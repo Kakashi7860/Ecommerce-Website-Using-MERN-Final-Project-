@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { API } from '../services/api'
+import { CartContext } from '../context/CartContext'
+
 
 function Home() {
   const [products,setProducts] = useState([])
+  const {addToCart} = useContext(CartContext)
 
   useEffect(()=>{
     API.get("/products")
@@ -16,10 +19,12 @@ return (
           <div key={p._id}>
             <h4>{p.name}</h4>
             <p>{p.price}</p>
+            <button className='btn btn-success' onClick={()=> addToCart(p)}>Add To Cart</button>
 
           </div>
         ))}
 
+     
 
     </div>
   )
